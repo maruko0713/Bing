@@ -1,0 +1,293 @@
+/*百度音乐随心听布局练习*/
+html {
+	overflow:hidden;
+}
+/*样式重置*/
+body,h1,h2,h3,ul,li,p{
+	padding:0;
+	margin:0;
+}
+h1,h2,h3 {
+	font-weight:normal;
+}
+li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	color:rgba(255,255,255,0.8)
+}
+
+/*全局样式设置*/
+body {
+	color:rgba(255,255,255,0.8);
+	font-size:14px;
+}
+/*工具类*/
+.clearfix:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearfix {
+	zoom:1;
+}
+/*背景*/
+.container {
+	background:#fff url(../images/bg1.jpg) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+/*头部*/
+header {
+	padding-top:20px;
+	color:rgba(255,255,255,0.8);
+}
+header .logo {
+	float:left;
+	margin-left:20px;
+	height:36px;
+	width:104px;
+	background:url(../images/all.png) no-repeat -118px -168px;
+}
+header .info {
+	float:right;
+}
+header .person, header .setting {
+	float:left;
+}
+header  li {
+	margin-left:20px;
+	float:left;
+	height:20px;
+}
+header li i {
+	display:inline-block;
+	margin-right:5px;
+	vertical-align:middle;
+	background:url(../images/all.png) no-repeat;
+}
+header li.name {
+	/*margin-right:20px;*/
+	padding-top:5px;
+}
+header li.hear i { 
+	background-position:-168px -252px;
+	width:20px;
+	height:24px;
+}
+header li.heart i {
+	width:20px;
+	height:24px;
+	background-position:-192px -140px;
+}
+header li.trash i {
+	width:24px;
+	height:24px;
+	background-position:-216px -228px;
+}
+header .setting {
+	margin:0 20px;
+	font-size:12px;
+}
+header .setting li {
+	margin:0 0 0 10px;
+	line-height:18px;
+	text-align:center;
+	color:rgba(255,255,255,0.5);
+	cursor:pointer;
+	padding:2px 10px;
+	border:5px;
+	border-radius:10px;
+	background:url("../images/all.png") no-repeat 0 0;
+}
+header .setting li:hover {
+	color:#fff;
+}
+
+/*主体样式*/
+.main .commend {
+	font-size:14px;
+	color:#fff;
+	position:absolute;
+	left:150px;
+	top:250px;
+}
+.main .commend .pic {
+	padding:5px;
+	height:90px;
+	width:90px;
+	background:url(../images/commend.jpg) no-repeat;
+	background-size:100% 100%;
+	margin-bottom:20px;
+}
+.main .commend p {
+	line-height:20px;
+}
+
+.main .now {
+	position:absolute;
+	left:285px;
+	top:40px;
+	height:430px;
+}
+.main .now .song {
+	float:left;
+}
+.main .now .lrc {
+	float:right;
+}
+.main .now h2 {
+	font-size:24px;
+	color:#fff;
+}
+.main .song {
+	padding:10px 10px 0 10px;
+	background:#fff;
+	height:420px;
+}
+.main .song .pic {
+	width:240px;
+	height:240px;
+	background:#fff url(../images/fm2.jpg) no-repeat 10px 10px;
+	background-size:100% 100%;
+}
+.main .song h3 {
+	font-size:18px;
+	color:#000;
+	margin-top:10px;
+}
+.main .song p {
+	color:rgb(102,102,102);
+	line-height:20px;
+	font-size:14px;
+}
+.main .song p:nth-of-type(2) {
+	padding-left:6px;
+}
+.main .control li a {
+	float:left;
+	width:20px;
+	height:20px;
+	background:url(../images/btns.png) no-repeat;
+	margin:10px 20px 20px 20px;
+}
+.main .control li.play a {
+    background-position:-324px 0;
+}
+.main .control li.play a:hover {
+	background-position:-348px 0;
+}
+.main .control li.stop a {
+    background-position:-276px 0;
+}
+.main .control li.stop a:hover {
+	background-position:-180px 0;
+}
+.main .control li.love a {
+    background-position:-396px 0;
+}
+.main .control li.love a:hover {
+	background-position:-300px 0;
+}
+.main .control li.trash a{
+    background-position:-60px 0;
+}
+.main .control li.trash a:hover {
+	background-position:-612px 0;
+}
+
+.main .control .rate {
+	width:100%;
+	background:#ccc;
+	height:2px;
+}
+.main .control .now-rate {
+	width:40%;
+	background:#666;
+	height:2px;
+}
+.main .song .setting {
+	height:40px;
+	background:#fff;
+	color:rgb(153,153,153);
+}
+.main .song .setting span {
+	line-height:40px;
+}
+.main .song .setting .time {
+	float:left;
+}
+.main .song .setting .now-time {
+	font-size:18px;
+}
+.main .song .setting .voice {
+	float:left;
+	margin:15px 0 0 10px;
+}
+.main .song .setting .voice i {
+	width:10px;
+	height:16px;
+	background:url(../images/btns.png) no-repeat -696px 0;
+	display:inline-block;
+	cursor:pointer;
+	vertical-align:middle;
+}
+.main .song .setting .voice .whole-voice {
+	width:40px;
+	height:5px;
+	background:#ccc;
+	display:inline-block;
+	margin:0 0 2px 4px;
+	border-radius:3px;
+
+}
+.main .song .setting .voice .now-voice {
+	width:40%;
+	height:inherit;
+	background:rgb(51,133,255);
+	border-radius:3px 0 0 3px;
+}
+.main .song .setting .download, .main .song .setting .share {
+	width:18px;
+	height:18px;
+	background:url(../images/btns.png) no-repeat;
+	float:right;
+	margin:15px 10px;
+}
+.main .song .setting .download {
+	background-position:-516px 0;
+}
+.main .song .setting .share {
+	background-position:-420px 0;
+}
+
+.main .now .lrc {
+	width:400px;
+	height:inherit;
+	background:url(../images/all.png) no-repeat 0 0;
+	background-size:300% 300%;
+}
+.main .now .lrc ul {
+	padding:10px 20px;
+}
+
+.change {
+	font-size:24px;
+	color:#fff;
+	position:fixed;
+	top:250px;
+	right:0;
+	padding-right:10px;
+}
+/*底部样式*/
+footer {
+	font-size:12px;
+	color:rgba(255,255,255,0.5);
+	position:fixed;
+	bottom:10px;
+	left:20px;
+}
